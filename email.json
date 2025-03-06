@@ -1,0 +1,18 @@
+{ "sampleEmails": [
+  {
+    "subject": "This is my not spammy email",
+    "text": "Here is the plain text part of the email",
+    "html": "<strong>Here is the HTML part of the email</strong>"
+  },
+  {
+    "subject": "Project Update",
+    "text": "Hey, here is the project update, we have a new feature coming soon",
+    "html": "<strong>Hey, here is the project update, we have a new feature coming soon</strong>"
+  },
+  {
+    "subject": "Have You Seen This?",
+    "text": "You make ton of money for free, just by clicking on this link",
+    "html": "<strong>You make ton of money for free, just by clicking on this link</strong>"
+  }
+]
+}

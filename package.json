@@ -1,0 +1,16 @@
+{
+  "name": "mini-spam-detector",
+  "version": "1.0.0",
+  "description": "little tool to gauge spam content",
+  "main": "index.js",
+  "scripts": {
+    "start": "node check-email.js",
+    "test": "npm test"
+  },
+  "author": "AdnanCodes",
+  "license": "ISC",
+  "dependencies": {
+    "spamassassin-client": "^1.1.0"
+  },
+  "type": "module"
+}

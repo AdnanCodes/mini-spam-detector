@@ -4,8 +4,8 @@ const fs = require("fs");
 const emails = JSON.parse(fs.readFileSync("./email.json", "utf8"));
 
 const client = new SpamAssassinClient({
-  host: "localhost",
-  port: 7830,
+  host: process.env.SA_HOST || "localhost",
+  port: process.env.SA_PORT || 783,
 });
 
 function createEMLString(email) {

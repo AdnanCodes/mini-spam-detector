@@ -1,18 +1,16 @@
-{ "sampleEmails": [
-  {
-    "subject": "This is my not spammy email",
-    "text": "Here is the plain text part of the email",
-    "html": "<strong>Here is the HTML part of the email</strong>"
-  },
-  {
-    "subject": "Project Update",
-    "text": "Hey, here is the project update, we have a new feature coming soon",
-    "html": "<strong>Hey, here is the project update, we have a new feature coming soon</strong>"
-  },
-  {
-    "subject": "Have You Seen This?",
-    "text": "You make ton of money for free, just by clicking on this link",
-    "html": "<strong>You make ton of money for free, just by clicking on this link</strong>"
-  }
-]
+{
+  "sampleEmails": [
+    {
+      "subject": "This is my not spammy email",
+      "body": "<strong>Here is the HTML part of the email</strong>"
+    },
+    {
+      "subject": "Project Update",
+      "body": "<strong>Hey, here is the project update, {XJS*C4JDBQADN1.NSBN3*2IDNEN*GTUBE-STANDARD-ANTI-UBE-TEST-EMAIL*C.34X} we have a new feature coming soon</strong>"
+    },
+    {
+      "subject": "Congratulations! You’ve won a prize!",
+      "body": "<p>Dear Friend,</p>\n    <p>We are excited to inform you that you have won a <strong>100% guaranteed prize</strong>!</p>\n    <p>Click <a href=\"http://example.com\">here</a> to claim your reward.</p>\n    <p>This offer expires soon, so act fast!</p>\n    <p>Best regards,<br>The Prize Team</p>"
+    }
+  ]
 }

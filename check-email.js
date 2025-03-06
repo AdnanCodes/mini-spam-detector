@@ -1,12 +1,34 @@
-import { SpamAssassinClient } from "spamassassin-client";
-import emails from "./email.json" assert { type: "json" };
+const { SpamAssassinClient } = require("spamassassin-client");
+const fs = require("fs");
+
+const emails = JSON.parse(fs.readFileSync("./email.json", "utf8"));
 
 const client = new SpamAssassinClient({
-  host: "http://192.168.68.92",
+  host: "localhost",
   port: 7830,
 });
 
+function createEMLString(email) {
+  const headers = [
+    `From: ${email.from}`,
+    `To: ${email.to}`,
+    `Subject: ${email.subject}`,
+    `Date: ${new Date().toUTCString()}`,
+    `MIME-Version: 1.0`,
+    `Content-Type: text/plain; charset=UTF-8`,
+    `Content-Transfer-Encoding: 7bit`,
+  ];
+
+  const emlContent = headers.join("\r\n") + "\r\n\r\n" + email.body;
+  return emlContent;
+}
+
 emails.sampleEmails.forEach(async (email) => {
-  const result = await client.check(email);
-  console.log(result);
+  try {
+    const emlString = createEMLString(email);
+    const result = await client.check(emlString);
+    console.info("Spam check Result", result);
+  } catch (error) {
+    console.error("Failed to check for spam", error);
+  }
 });

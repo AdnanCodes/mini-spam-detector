@@ -4,12 +4,14 @@
   "description": "little tool to gauge spam content",
   "main": "index.js",
   "scripts": {
-    "start": "node check-email.js",
+    "start": "node server.js",
     "test": "npm test"
   },
   "author": "AdnanCodes",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
     "spamassassin-client": "^1.1.0"
   },
   "engines": {

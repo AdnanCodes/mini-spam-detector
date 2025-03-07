@@ -5,9 +5,6 @@ const { SpamAssassinClient } = require("spamassassin-client");
 const app = express();
 app.use(express.json());
 
-console.log("SA_HOST", process.env.SA_HOST);
-console.log("SA_PORT", process.env.SA_PORT);
-
 const spamAssassinClient = new SpamAssassinClient({
   host: process.env.SA_HOST || "127.0.0.1",
   port: Number(process.env.SA_PORT) || 783,
